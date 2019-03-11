@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sample test HtmlTable custom keywords</name>
+   <tag></tag>
+   <comment>Navigate to hotels page</comment>
+   <testCaseGuid>89039d10-5974-4b17-8177-718670aca64c</testCaseGuid>
+</TestCaseEntity>
