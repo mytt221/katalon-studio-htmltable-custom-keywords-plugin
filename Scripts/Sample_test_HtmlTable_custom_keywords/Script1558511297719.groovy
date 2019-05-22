@@ -6,10 +6,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import kms.turing.katalon.plugins.helper.XPathHelper.CompareOptions
 import kms.turing.katalon.plugins.helper.table.WebTableHelper.CellTextOptions
 
-WebUI.callTestCase(TestCaseFactory.findTestCase("Open browser and go to Home page"), null)
+WebUI.callTestCase(TestCaseFactory.findTestCase("Test Cases/Open_browser_and_go_to_Home page"), null)
 
 "Navigate to hotels page"
-WebUI.navigateToUrl("https://www.phptravels.net/supplier/hotels")
+WebUI.navigateToUrl("https://www.phptravels.net/admin-portal/admin/hotels")
 
 "Identify table web element based on column headers"
 table = CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.identifyTableByColumnHeaders'(['Image','Name','Stars'], 10,  FailureHandling.CONTINUE_ON_FAILURE)
@@ -37,7 +37,7 @@ cellCheck = CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHel
 
 
 "Verify text display inside a cell"
-existed = CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText'(table, 'Name', 'Abbas hotel', CellTextOptions.CONTENT_TEXT, CompareOptions.EQUALS,  FailureHandling.CONTINUE_ON_FAILURE)
+existed = CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.verifyCellPresentWithText'(table, 'Name', 'Islamabad Marriott Hotel', CellTextOptions.CONTENT_TEXT, CompareOptions.EQUALS,  FailureHandling.CONTINUE_ON_FAILURE)
 
 "Set text for a cell"
 CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.setTextForCell'(cellOrder, "5",  FailureHandling.CONTINUE_ON_FAILURE)
@@ -63,7 +63,7 @@ CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnC
 CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnLinkInCell'(cellName,'Swissotel Le Plaza Basel',  FailureHandling.CONTINUE_ON_FAILURE)
 
 "Back to hotels page"
-WebUI.navigateToUrl("https://www.phptravels.net/supplier/hotels")
+WebUI.navigateToUrl("https://www.phptravels.net/admin-portal/admin/hotels")
 
 "Click on clickable link inside a cell"
 CustomKeywords.'kms.turing.katalon.plugins.helper.table.HTMLTableHelper.clickOnClickableControlInCell'(cellActions, "room calender",  FailureHandling.CONTINUE_ON_FAILURE)
